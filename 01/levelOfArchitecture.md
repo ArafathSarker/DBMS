@@ -23,14 +23,12 @@ The **One-Level Architecture** of DBMS is the simplest architecture where the da
 - Suitable for **small databases** or simple applications.
   
 ### Diagram:
+| Order | Component |
+|-------|-----------|
+| 1     | **User**  |
+| ↓     |           |
+| 2     | **Database** |
 
-+----------------+
-| User |
-+----------------+
-|
-+----------------+
-| Database |
-+----------------+
 
 
 ---
@@ -55,19 +53,14 @@ It is also known as the **Schema Architecture**.
 
 ### Diagram:
 
-+----------------+ <-- External View (User)
-| User |
-+----------------+
-|
-v
-+----------------+ <-- Conceptual Schema (Optional)
-| DBMS Engine |
-+----------------+
-|
-v
-+----------------+ <-- Internal Schema (Storage)
-| Database |
-+----------------+
+| Order | DBMS Level                     | Component   |
+|-------|--------------------------------|-------------|
+| 1     | **External View**              | User        |
+| ↓     |                                |             |
+| 2     | **Conceptual Schema**          | DBMS Engine |
+| ↓     |                                |             |
+| 3     | **Internal Schema (Storage)**  | Database    |
+
 
 
 
@@ -94,21 +87,14 @@ It provides **complete data abstraction** and separates the database into three 
 
 ### Diagram:
 
- +----------------+     <-- External Level
-   |     User 1     |
-   +----------------+
-   |     User 2     |
-   +----------------+
-          |
-          v
-   +----------------+     <-- Conceptual Level
-   | Logical Schema |
-   +----------------+
-          |
-          v
-   +----------------+     <-- Internal Level
-   | Physical Data  |
-   +----------------+
+ | Order | DBMS Level          | Component        |
+|-------|--------------------|------------------|
+| 1     | **External Level**  | User 1, User 2   |
+| ↓     |                    |                  |
+| 2     | **Conceptual Level** | Logical Schema |
+| ↓     |                    |                  |
+| 3     | **Internal Level**  | Physical Data   |
+
 
 
 ---

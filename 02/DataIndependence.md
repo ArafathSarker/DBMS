@@ -51,14 +51,12 @@ There are **two types of data independence** in DBMS:
 
 ### Diagram:
 
-+----------------+ <-- External Level (User Views)
-| Users |
-+----------------+
-|
-v
-+----------------+ <-- Conceptual Level (Logical Schema)
-| Logical Design |
-+----------------+
+| Level Order | DBMS Level         | Description                 |
+|------------|--------------------|-----------------------------|
+| 1          | **External Level** | User Views / User Interface |
+| ↓          |                    |                             |
+| 2          | **Conceptual Level** | Logical Schema / Logical Design |
+
 
 
 ---
@@ -79,26 +77,23 @@ v
 
 ### Diagram:
 
-+----------------+ <-- Conceptual Level
-| Logical Schema |
-+----------------+
-|
-v
-+----------------+ <-- Internal Level (Physical Storage)
-| Physical Data |
-+----------------+
+| Level Order | DBMS Level            | Description                    |
+|------------|-----------------------|--------------------------------|
+| 1          | **Conceptual Level**  | Logical Schema                 |
+| ↓          |                       |                                |
+| 2          | **Internal Level**    | Physical Storage / Physical Data |
+
 
 
 ---
 
 ## Comparison Table
-
-| Feature                     | Logical Data Independence | Physical Data Independence |
-|----------------------------|---------------------------|----------------------------|
-| Affected Level             | Conceptual Schema         | Internal Schema            |
-| User/Application Impact    | No                        | No                         |
-| Complexity                 | Easier                    | More Complex               |
-| Examples                   | Adding attributes         | Indexing, file changes     |
+| Feature                  | Logical Data Independence        | Physical Data Independence           |
+|--------------------------|----------------------------------|--------------------------------------|
+| Affected Level           | Conceptual Schema                | Internal Schema                      |
+| Impact on Applications   | No                               | No                                   |
+| Implementation Difficulty| Easier                           | More Complex                         |
+| Examples                 | Adding/modifying attributes      | Indexing, file organization changes  |
 
 ---
 
