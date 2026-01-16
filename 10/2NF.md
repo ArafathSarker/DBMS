@@ -116,3 +116,11 @@ CREATE TABLE Enrollment (
 
 - Transitive dependencies may still exist  
 - Not sufficient for complete normalization  
+
+## Difference Between First Normal Form (1NF) and Second Normal Form (2NF)
+
+| Aspect | 1NF | 2NF |
+|------|-----|-----|
+| Focus | Atomic values | Full dependency |
+| Dependency handled | Repeating groups | Partial dependency |
+| Composite key issue | Not addressed | Addressed |
