@@ -1,18 +1,93 @@
-# Normal Forms (NF) Shortcuts – Exam Notes
-
-- **1NF (First Normal Form)** = Atomic values, no repeating groups  
-- **2NF (Second Normal Form)** = 1NF + No partial dependency  
-- **3NF (Third Normal Form)** = 2NF + No transitive dependency  
-- **BCNF (Boyce–Codd Normal Form)** = 3NF + Every determinant is a candidate key  
-- **4NF (Fourth Normal Form)** = BCNF + No multi-valued dependencies  
-- **5NF (Fifth Normal Form / PJNF)** = 4NF + No join dependency  
+# 🎯 Normal Forms (NF) – Quick Exam Notes
 
 ---
 
-### Quick Memory Tips:
-- **1NF** → Atomic  
-- **2NF** → Full key dependency  
-- **3NF** → Non-key attributes depend only on primary key  
-- **BCNF** → Determinant must be a key  
-- **4NF** → Remove independent multi-values  
-- **5NF** → Tables join without redundancy  
+## 1️⃣ First Normal Form (1NF)
+
+**Rule:**
+
+* All values must be **atomic (indivisible)**
+* No repeating groups or multi-valued attributes
+
+**Keyword:** *Atomicity*
+
+---
+
+## 2️⃣ Second Normal Form (2NF)
+
+**Rule:**
+
+* Must be in **1NF**
+* No **partial dependency**
+
+  * Every non-key attribute must depend on the **whole primary key**, not just part of it
+
+**Keyword:** *Full key dependency*
+
+---
+
+## 3️⃣ Third Normal Form (3NF)
+
+**Rule:**
+
+* Must be in **2NF**
+* No **transitive dependency**
+
+  * Non-key attributes should depend **only on the primary key**, not on other non-key attributes
+
+**Keyword:** *Only on the key*
+
+---
+
+## 🅱️ Boyce–Codd Normal Form (BCNF)
+
+**Rule:**
+
+* Must be in **3NF**
+* **Every determinant must be a candidate key**
+
+**Keyword:** *Determinant = Key*
+
+---
+
+## 4️⃣ Fourth Normal Form (4NF)
+
+**Rule:**
+
+* Must be in **BCNF**
+* No **multi-valued dependencies**
+
+  * Remove independent multi-valued facts about an entity
+
+**Keyword:** *No independent multi-values*
+
+---
+
+## 5️⃣ Fifth Normal Form (5NF / PJNF)
+
+**Rule:**
+
+* Must be in **4NF**
+* No **join dependencies**
+
+  * Table cannot be further decomposed without losing information
+
+**Keyword:** *No redundancy after joins*
+
+---
+
+# 🧠 Ultra-Short Memory Chain
+
+| NF   | Think           |
+| ---- | --------------- |
+| 1NF  | Atomic          |
+| 2NF  | Full key        |
+| 3NF  | Only key        |
+| BCNF | Key rule        |
+| 4NF  | One multi-value |
+| 5NF  | Perfect join    |
+
+---
+
+Perfect for last-minute revision before exams ✅
+Want a few examples for each form next?
